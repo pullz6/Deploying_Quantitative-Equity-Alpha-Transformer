@@ -8,6 +8,7 @@ model = TemporalFusionTransformer.load_from_checkpoint("model.ckpt")
 # Data must be a Pandas DataFrame with columns:
 # ['Ticker', 'date', 'close', 'liquidity_flags', 'time_idx']
 
+# ['Ticker', 'date', 'close', 'liquidity_flags', 'time_idx'] -- need to find the dataset?
 # 3. Generate Probabilistic Predictions
 raw_prediction = model.predict(your_dataframe, mode="raw", return_x=True)
 
